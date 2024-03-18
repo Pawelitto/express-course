@@ -59,6 +59,10 @@ app.patch('/api/v1/tours/:id', (req, res) => {
   res.end('Updated tour here...');
 });
 
+app.delete('/api/v1/tours/:id', (req, res) => {
+  res.end(`Deleting item: ${req.params.id}`);
+});
+
 const port = 3000;
 
 app.listen(port, () => {
